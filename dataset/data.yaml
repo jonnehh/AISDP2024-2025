@@ -1,0 +1,7 @@
+train: C:\Users\divin\OneDrive\Desktop\Y3S2_projects\AISDP\Code\dataset\train
+val: C:\Users\divin\OneDrive\Desktop\Y3S2_projects\AISDP\Code\dataset\valid
+
+nc: 10
+names: ['Chicken Rice', 'Fish Porridge', 'Char Siew Rice', 'Mee Siam', 
+        'Bak Kut Teh', 'Chwee Kueh', 'Yong Tau Foo', 'Steamed Fish', 
+        'Ngoh Hiang', 'Kaya Toast']
