@@ -1,0 +1,182 @@
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate6_crop_1.jpg	AmlodipineBesilate
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate_crop_0.jpg	Norvasc?
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin8_crop_7.jpg	HEALTHCARE
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_10.jpg	Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_15.jpg	(amlodipinebesylate)
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin3_crop_2.jpg	mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate9_crop_7.jpg	Manufactuned by: Daiicni Sanisyo Europe Gmbr
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose2_crop_2.jpg	Acarbose Tablets IP
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin14_crop_4.jpg	ORALHYPOGLYCEMICAGENT
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_9.jpg	fablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_3.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_12.jpg	Give as directed.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide4_crop_7.jpg	Alu Alu Pack
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate11_crop_3.jpg	AMDOL
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_8.jpg	100Toblets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate11_crop_4.jpg	lodipine besylate)
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_4.jpg	R
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate_crop_2.jpg	phizer
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin14_crop_0.jpg	RiteVED
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate2_crop_2.jpg	TabletsIP2.5mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate6_crop_0.jpg	Rx
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide3_crop_1.jpg	Repaglinide Tablets U.S.P.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide2_crop_2.jpg	0.5mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose7_crop_3.jpg	Bayer Zydus Pharma
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide7_crop_0.jpg	RepaglinideAndVogliboseTablets0.5mg+0.3mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate9_crop_6.jpg	Antihypertensive/Anti-angina
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin6_crop_1.jpg	Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose2_crop_3.jpg	ACARB
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_1.jpg	mtowan
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate8_crop_5.jpg	UNCHEM
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose_crop_7.jpg	BOLCO26
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_34.jpg	GTIN:
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose5_crop_2.jpg	Hibose-50mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose5_crop_0.jpg	Acarbose
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin6_crop_2.jpg	850mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate12_crop_0.jpg	10x10Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin8_crop_1.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_8.jpg	Oraluse
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate2_crop_0.jpg	MediSACH
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin6_crop_3.jpg	Eachtabletcontainsmetforminhydrochloride850mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin10_crop_5.jpg	30
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin11_crop_0.jpg	500mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_17.jpg	1-355-7
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate3_crop_1.jpg	Only
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin13_crop_6.jpg	Rx only
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate3_crop_4.jpg	Tablets, U.S.P.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide1_crop_1.jpg	EUREPA-0.5
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide6_crop_1.jpg	Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate12_crop_3.jpg	Medicine Pvt. Ltd
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin6_crop_4.jpg	56Film-coatedTablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin5_crop_5.jpg	Orali use
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin9_crop_1.jpg	Metformin HydrochlorideTablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide7_crop_3.jpg	10BLISTERSTRIPSOF10TABLETSEACH
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide1_crop_0.jpg	Repaglinide Tablets I.P.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin3_crop_7.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_10.jpg	500mgFlm-CoatedTablet
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin9_crop_2.jpg	Mintol-M
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_6.jpg	mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose3_crop_4.jpg	30Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin8_crop_2.jpg	500mgProlonged-ReleaseTablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_31.jpg	RUPJ355MM
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide3_crop_5.jpg	10STRIPSOF10TABLETSEACH
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_37.jpg	VIATRIS
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_28.jpg	Distributed by.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_11.jpg	100Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate11_crop_5.jpg	10mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin5_crop_1.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_1.jpg	+
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide4_crop_1.jpg	Zydus
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose3_crop_2.jpg	(Acarbose)
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_22.jpg	equivalent to 10 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_12.jpg	IATRI
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose4_crop_0.jpg	Acarbose TabletsIP
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose7_crop_1.jpg	BAYER
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin4_crop_6.jpg	Mode in Germany
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide4_crop_3.jpg	RepaglinideTablets IP 1 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin11_crop_5.jpg	84Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin_crop_1.jpg	ZANZA
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose6_crop_5.jpg	MEDIDAY
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_4.jpg	AmlodipineBesylateTabletsUSP10mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide6_crop_0.jpg	Repaglinide3 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_2.jpg	Amlowan
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_6.jpg	A
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate4_crop_2.jpg	Tablets IP 5 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin3_crop_8.jpg	84Film-CoatedTablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin8_crop_5.jpg	56Tablels
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin5_crop_0.jpg	Metformin
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_14.jpg	E
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide1_crop_3.jpg	0 BLISTERS
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin14_crop_2.jpg	R
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin11_crop_4.jpg	RelonGhem
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate2_crop_1.jpg	Amlodipine Besylate
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide5_crop_6.jpg	TABLETS
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose6_crop_1.jpg	R
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate_crop_4.jpg	7Tablets/Carton
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin11_crop_1.jpg	Metformin
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide5_crop_2.jpg	VOG
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate3_crop_3.jpg	Besylate
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin10_crop_4.jpg	MadeinGermany
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide3_crop_6.jpg	32No ModeCamg.NH-31A
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_6.jpg	Dispense in tight (USP)
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_29.jpg	Viatris SpecialtyLC
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate4_crop_0.jpg	20 x 10 Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate9_crop_8.jpg	Lutpo
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_9.jpg	Norvasc?
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate6_crop_2.jpg	Tablets IP 2.5 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_27.jpg	LOT:/EXP:
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_38.jpg	023 Viatris hc.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate12_crop_1.jpg	Amlodipine Besilate Tablets IP 10 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_0.jpg	Z'REX
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin3_crop_5.jpg	Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide5_crop_8.jpg	TEKI
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_0.jpg	southstardrug
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate8_crop_1.jpg	Amlodipine Besylate
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_12.jpg	2teldoTo0r
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose7_crop_2.jpg	Glucobay25
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin3_crop_1.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin5_crop_7.jpg	28tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_36.jpg	Morgantown, WV
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_11.jpg	28
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_2.jpg	R
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_11.jpg	2.5mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate8_crop_0.jpg	NDC23300-242-19
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate8_crop_3.jpg	5mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose_crop_4.jpg	50
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide6_crop_3.jpg	YOUR BRAND NAME
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide3_crop_0.jpg	B
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin11_crop_2.jpg	Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_6.jpg	500mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_3.jpg	10
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide2_crop_0.jpg	Repaglinide TabletsI.P.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin4_crop_4.jpg	[metfomin HC]
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide5_crop_0.jpg	&Repaglinide&VogliboseTablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose_crop_0.jpg	Acarbose
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_5.jpg	HCI
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_18.jpg	prescribing infomation.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide6_crop_2.jpg	YOURBRAND
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_0.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_6.jpg	四
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin4_crop_2.jpg	MetforminDenk1000
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin12_crop_2.jpg	Sustained Release
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_7.jpg	500
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate12_crop_2.jpg	Genericart
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate9_crop_11.jpg	Under tuthority of PFIZER INC., New York, N.Y. U.S.A
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide7_crop_1.jpg	EUREPA-VO.5/0.3
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_5.jpg	PROTECT FROM LIGHT.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose7_crop_4.jpg	10tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate2_crop_3.jpg	Amlobraz2.5
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin7_crop_7.jpg	MetforminHCI
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin8_crop_0.jpg	MetabetSR
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_4.jpg	(15° to 30°C).
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose6_crop_4.jpg	Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide5_crop_4.jpg	Rapiglinide
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin13_crop_2.jpg	Hydrochloride
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate9_crop_1.jpg	AMLODIPINEBESILATE
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate4_crop_3.jpg	Amlonaze-5
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin12_crop_1.jpg	Metformin Hydrochloride
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate9_crop_9.jpg	8se 1, 85276 Pfaffentofen, Germtamy
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate8_crop_4.jpg	ROnly 90Tablts
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate6_crop_3.jpg	Amlip-2.5
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin_crop_3.jpg	Healthcare
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_0.jpg	Fulflledby:
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin_crop_6.jpg	Metformin hydrochloride
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin12_crop_0.jpg	10 x 10 Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate1_crop_5.jpg	To Treat Hypertension
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate7_crop_5.jpg	M
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_24.jpg	amlodipine.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_30.jpg	2
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin2_crop_4.jpg	lets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin5_crop_2.jpg	500mgfilm-coatedtablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose3_crop_1.jpg	?50
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_11.jpg	resistant containers.
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin12_crop_3.jpg	TabletsIP500mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin10_crop_1.jpg	Pharma
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\metformin9_crop_0.jpg	Myo-lnositol&SustainedRelease
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide3_crop_2.jpg	EUREPA-1
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide_crop_1.jpg	Repaglinide
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\repaglinide4_crop_5.jpg	-1
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose2_crop_5.jpg	100MG
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose6_crop_0.jpg	10x10Tablets
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\Acarbose_crop_2.jpg	50 mg
+C:\Users\chatEV\PPOCR\PaddleOCR\train_data\rec\train\amlodipine besylate5_crop_13.jpg	DOSAGE AND USE
