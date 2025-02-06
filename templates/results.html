@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLO Results</title>
+</head>
+<body>
+    <h1>Detection Results</h1>
+    <img src="{{ image_path }}" alt="Uploaded Image" width="400px">
+    
+    <h2>Detections:</h2>
+    <ul>
+        {% for detection in detections %}
+            <li><strong>{{ detection.class }}</strong> - Confidence: {{ detection.confidence }}<br>
+                Message: {{ detection.message }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
