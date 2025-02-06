@@ -1,9 +1,5 @@
 from ultralytics import YOLO
 
-DATASET_PATH = "dataset"
-MODEL_SAVE_PATH = "model_results"
-DATA_YAML_PATH = "dataset/data.yaml"
-
 def infer_yolo(image_path):
     model = YOLO(f"C:/Users/divin/OneDrive/Desktop/Y3S2_projects/AISDP/Code/model_results/train/weights/best.pt")
     results = model.predict(source=image_path, imgsz=640, conf=0.6)
