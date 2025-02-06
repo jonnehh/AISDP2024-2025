@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form, table, .notifications, .voice-assistant {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .voice-assistant {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .notifications {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Assistant</h1>
+        <p>Manage your reminders and interact with your voice assistant!</p>
+    </header>
+
+    <h2>Add Reminder</h2>
+    <form action="/add_reminder" method="post">
+        <label for="time">Time (HH:MM):</label>
+        <input type="time" id="time" name="time" required>
+        <br><br>
+        <label for="medicine">Medicine:</label>
+        <input type="text" id="medicine" name="medicine" required>
+        <br><br>
+        <button type="submit">Add Reminder</button>
+    </form>
+
+    <br>
+    <a href="/reminders">View All Reminders</a>
+
+    <hr>
+
+    <div class="notifications">
+        <h2>Notifications</h2>
+        <div id="notifications">
+            <p>No notifications yet.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="voice-assistant">
+        <h2>Voice Assistant</h2>
+        <form method="post">
+            <button type="submit">Listen</button>
+        </form>
+    </div>
+
+    <script>
+        // WebSocket or AJAX integration for notifications (optional)
+        console.log("Notifications section is ready for integration!");
+    </script>
+</body>
+</html>

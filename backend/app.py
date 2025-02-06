@@ -1,53 +1,45 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
-import pyttsx3  # For text-to-speech notifications
+from voice_assistant import VoiceAssistant
+import threading
 
 app = Flask(__name__)
-
-# In-memory storage for reminders
 reminders = []
+voice_assistant = VoiceAssistant()
 
-# Initialize the text-to-speech engine
-tts_engine = pyttsx3.init()
 
-# Function to speak notifications
-def notify_user(message):
-    print(f"🔔 {message}")
-    tts_engine.say(message)
-    tts_engine.runAndWait()
-
-# Function to check reminders
-def check_reminders():
-    now = datetime.now().strftime("%H:%M")
-    for reminder in reminders:
-        if reminder["time"] == now and not reminder.get("notified"):
-            notify_user(f"It's time to take {reminder['medicine']}!")
-            reminder["notified"] = True  # Mark reminder as notified
-
-# Schedule the reminder checker to run every minute
-scheduler = BackgroundScheduler()
-scheduler.add_job(func=check_reminders, trigger="interval", seconds=60)
-scheduler.start()
-
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["GET", "POST"])
 def home():
-    return jsonify({"message": "Welcome to the Digital Assistant"}), 200
+    if request.method == "POST":
+        # Run voice assistant in a separate thread
+        def run_voice_assistant():
+            command = voice_assistant.listen()
+            if command:
+                voice_assistant.handle_command(command)
+        
+        threading.Thread(target=run_voice_assistant).start()
+    return render_template("index.html")
+
 
 @app.route("/add_reminder", methods=["POST"])
 def add_reminder():
-    time = request.args.get("time")
-    medicine = request.args.get("medicine")
-    if not time or not medicine:
-        return jsonify({"error": "Time and medicine are required"}), 400
+    time = request.form.get("time")
+    medicine = request.form.get("medicine")
+    if time and medicine:
+        reminders.append({"time": time, "medicine": medicine, "notified": False})
+        return redirect(url_for("home"))
+    return jsonify({"error": "Invalid input"}), 400
 
-    # Add the reminder
-    reminders.append({"time": time, "medicine": medicine, "notified": False})
-    return jsonify({"status": "success", "message": f"Reminder set for {medicine} at {time}"}), 200
+@app.route("/reminders", methods=["GET"])
+def show_reminders():
+    return jsonify(reminders)
 
-@app.route("/get_reminders", methods=["GET"])
-def get_reminders():
-    return jsonify({"reminders": reminders}), 200
+@app.route("/delete_reminders", methods=["DELETE"])
+def delete_reminders():
+    reminders.clear()
+    return jsonify({"message": "All reminders deleted."})
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000, debug=True)
+    app.run(host="127.0.0.1", port=8000, debug=True, threaded=False)
+
