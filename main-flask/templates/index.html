@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时摄像头 OCR 识别</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        video, canvas { width: 80%; max-width: 400px; margin: 10px; }
+        .result-box { text-align: left; margin-top: 20px; padding: 10px; background: #f9f9f9; border: 1px solid #ddd; }
+        button { margin-top: 15px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>实时摄像头 OCR 识别</h2>
+
+    <!-- 视频流 -->
+    <video id="video" autoplay></video>
+    <br>
+
+    <!-- 拍照按钮 -->
+    <button id="capture-btn">拍照并识别</button>
+    
+    <!-- 隐藏的 Canvas -->
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <h3>OCR 识别结果</h3>
+    <div class="result-box" id="ocr-result">点击上方按钮拍照并识别</div>
+
+    <h3>RAG 检索结果</h3>
+    <div class="result-box" id="rag-result"></div>
+
+    <script>
+        // ✅ 获取摄像头画面
+        const video = document.getElementById("video");
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => { video.srcObject = stream; })
+            .catch(err => console.error("摄像头无法访问: ", err));
+
+        function captureImage() {
+            const canvas = document.getElementById("canvas");
+            const context = canvas.getContext("2d");
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // ✅ 转换为 Base64 格式
+            const imageData = canvas.toDataURL("image/jpeg");
+
+            // ✅ 发送到 Flask 服务器进行 OCR 识别
+            $.ajax({
+                url: "/capture",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ image: imageData }),
+                success: function(response) {
+                    // 显示 OCR 结果
+                    $("#ocr-result").html("<strong>OCR 内容：</strong> " + response.ocr_result.join(", "));
+                    
+                    // 显示 RAG 检索结果
+                    $("#rag-result").html("<strong>RAG 检索结果：</strong> " + response.rag_result);
+                },
+                error: function() {
+                    $("#ocr-result").html("<strong>错误：</strong> 无法识别图像");
+                    $("#rag-result").html("");
+                }
+            });
+        }
+
+        // ✅ 添加按钮点击事件
+        document.getElementById("capture-btn").addEventListener("click", captureImage);
+    </script>
+
+</body>
+</html>

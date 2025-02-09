@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: main-flask
+  namespace: my-app
+  labels:
+    app: main-flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: main-flask
+  template:
+    metadata:
+      labels:
+        app: main-flask
+    spec:
+      containers:
+      - name: main-flask
+        image: jinnan77712/main-flask:latest  # 请替换为实际镜像地址
+        ports:
+        - containerPort: 888
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 888
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 888
+          initialDelaySeconds: 5
+          periodSeconds: 5
