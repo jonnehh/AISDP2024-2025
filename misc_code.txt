@@ -1,0 +1,22 @@
+kubectl get hpa -n my-app
+kubectl get pods -w
+hey -z 60s -c 100 http://127.0.0.1:8080
+kubectl proxy
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/workloads?namespace=my-app
+http://127.0.0.1:8080/
+
+kubectl rollout restart deployment -n my-app
+
+for deploy in $(kubectl get deployments -n my-app -o jsonpath='{.items[*].metadata.name}'); do
+  kubectl set image deployment/$deploy *=jonnehh/$deploy:v1 -n my-app
+done
+
+for deploy in $(kubectl get deployments -n my-app -o jsonpath='{.items[*].metadata.name}'); do
+  kubectl rollout undo deployment/$deploy -n my-app
+done
+
+
+kubectl -n kubernetes-dashboard create token kubernetes-dashboard
+
+
+eyJhbGciOiJSUzI1NiIsImtpZCI6IlNIUlgySjZUYVRJbml1Z1dlekEycXNhTGNMb2hTb2FNVDhkSHRSMFFGX0kifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNzM5ODc1Nzg2LCJpYXQiOjE3Mzk4NzIxODYsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiZmQ5OTc1Y2QtMTBiYS00ZTkxLWE3OGYtZmYyNjQ4OWVhNDZhIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsInVpZCI6IjBjZmNkZjUzLWU3ZjctNGM5MC04YTA5LTYzM2NhNGRhMWRiNCJ9fSwibmJmIjoxNzM5ODcyMTg2LCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQifQ.RV1z6gBkHv1mg1_TIUyR7JljYqKACWWuUQ4nIx-7jmpwpqfcGC6FQhDmiRSTiBOUFqzYgngd3J8aJ5C7Ecs58tNKm1EzSJ3nc6LurkhD2B2TmqSN6wFaTzu07uewW6WQghFIbucvUu0RVuDyB5l4JoDY7eVLDHTMDdFEXTB_IIaxJCVjAkqSrCFtm2XDuA8MSenaC2U3ST4qZbnQGV5lE7MgN8i3xBudQypiKCXkAAjxwo9eTISBwLbUhKJCHSV2I54WvmYzX1Ts3U4NYMmRbO8--_UUCRYLKPp3hrve-Drvpog2zWEoJen1LQWeYO53eIoRh-0q1mkzN7AiOmb9Lg

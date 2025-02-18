@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: voice2text-service-pdb
+  namespace: my-app
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: voice2text-service

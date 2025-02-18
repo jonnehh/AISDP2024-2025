@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-data-server
+  namespace: my-app
+spec:
+  selector:
+    app: flask-data-server  # ✅ selector 应该在这里，而不是 ports 里
+  ports:
+    - protocol: TCP
+      port: 6050
+      targetPort: 6050
+  type: ClusterIP

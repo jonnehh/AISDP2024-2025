@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-data-server
+  namespace: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-data-server
+  template:
+    metadata:
+      labels:
+        app: flask-data-server
+    spec:
+      containers:
+      - name: flask-data-server
+        image: jonnehh/flask-data-server:latest
+        ports:
+        - containerPort: 6050
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: POSTGRES_PASSWORD

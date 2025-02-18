@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Pill sense</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page">
+      <!-- Breadcrumbs -->
+
+      <!-- Overview-->
+ 
+      <!-- About This Project -->
+      <section class="section section-lg">
+        <div class="container">
+          <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+            <div class="col-md-10 col-lg-7">
+              <div class="thumbnail-video-1">
+                <div class="embed-responsive embed-responsive-16by9" style="background-color:white;">
+                </div>
+                <div class="thumbnail-video__overlay video-overlay">
+                 <video id="video"  autoplay></video>
+                 <canvas id="canvas" style="display:none;"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-5 col-xl-4">
+              <div class="inset-left-2"> 
+                <h3>Pill Box Identification</h3>
+                <h4 class="h4-smaller">Medicine Detail1：</h4>
+                <h4 class="h4-smaller" id="ocr-result"></h4>
+                <div class="result-box" id="rag-result"></div>
+                 <button class="button button-primary button-winona" id="capture-btn">identify</button>
+                 <button class="button button-primary button-winona" style="background-color:cadetblue;" id="back-btn" ><a href="{{ url_for('home') }}">Back</a></button>
+                 <button class="button button-primary button-winona" style="background-color:white; color: black;" id="recordBtn">🎤 Start recording</button>
+                 <p id="status">Unrecorded</p>
+                 <p hidden><strong>Transcript:</strong> <span id="transcription"></span></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials-->
+ 
+
+
+    
+    </div>
+    <div class="preloader"> 
+      <div class="preloader-logo"><img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="" width="169" height="24" srcset="images/logo-default-324x45.png 2x"/>
+      </div>
+      <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="{{ url_for('static', filename='js/core.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+      let mediaRecorder;
+      let audioChunks = [];
+      let silenceTimer;
+      let recording = false;
+
+      document.addEventListener("DOMContentLoaded", () => {
+          const recordBtn = document.getElementById("recordBtn");
+          const statusText = document.getElementById("status");
+          const transcriptionText = document.getElementById("transcription");
+
+          recordBtn.addEventListener("click", async function() {
+              if (recording) {
+                  stopRecording();
+                  return;
+              }
+
+              try {
+                  const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                  mediaRecorder = new MediaRecorder(stream);
+                  audioChunks = [];
+
+                  mediaRecorder.ondataavailable = event => audioChunks.push(event.data);
+
+                  mediaRecorder.onstop = async () => {
+                      const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+                      const formData = new FormData();
+                      formData.append("audio", audioBlob, "recording.wav");
+
+                      statusText.innerText = "⏳ uploading...";
+                      try {
+                          const response = await fetch("/upload", { method: "POST", body: formData });
+                          const result = await response.json();
+                          transcriptionText.innerText = result.transcription || "Conversion failure";
+                      } catch (error) {
+                          transcriptionText.innerText = "❌ Conversion failure：" + error.message;
+                      }
+                      statusText.innerText = "✅ End of recording";
+                      recording = false;
+                      recordBtn.innerText = "🎤 Start recording";
+                  };
+
+                  mediaRecorder.start();
+                  recording = true;
+                  statusText.innerText = "🎙️ In the recording...";
+                  recordBtn.innerText = "⏹️ Stop recording";
+
+                  // 监听无声时间，3 秒无声后自动停止
+                  silenceTimer = setTimeout(() => {
+                      stopRecording();
+                  }, 5000);
+
+              } catch (error) {
+                  console.error("🎤 Recording error", error);
+                  statusText.innerText = "❌ For legal recording, please check microphone permissions";
+              }
+          });
+
+          function stopRecording() {
+              if (mediaRecorder && mediaRecorder.state === "recording") {
+                  mediaRecorder.stop();
+                  clearTimeout(silenceTimer);
+                  statusText.innerText = "🎤 End of recording";
+              }
+          }
+      });
+  </script>
+    <script>
+      // ✅ 获取摄像头画面
+      const video = document.getElementById("video");
+      navigator.mediaDevices.getUserMedia({ video: true })
+          .then(stream => { video.srcObject = stream; })
+          .catch(err => console.error("摄像头无法访问: ", err));
+
+      function captureImage() {
+          const canvas = document.getElementById("canvas");
+          const context = canvas.getContext("2d");
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+          // ✅ 转换为 Base64 格式
+          const imageData = canvas.toDataURL("image/jpeg");
+
+          // ✅ 发送到 Flask 服务器进行 OCR 识别
+          $.ajax({
+              url: "/capture",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify({ image: imageData }),
+              success: function(response) {
+                  // 显示 OCR 结果
+                  $("#ocr-result").html("<strong>Medicine name：</strong> " + response.ocr_result);
+                  
+                  // 显示 RAG 检索结果
+                  $("#rag-result").html("<strong>Function：</strong> " + response.rag_result);
+              },
+              error: function() {
+                  $("#ocr-result").html("<strong>Error：</strong> Unrecognized image");
+                  $("#rag-result").html("");
+              }
+          });
+      }
+
+      // ✅ 添加按钮点击事件
+      document.getElementById("capture-btn").addEventListener("click", captureImage);
+  </script>
+  </body>
+</html>
