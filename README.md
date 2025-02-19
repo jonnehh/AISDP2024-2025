@@ -87,5 +87,3 @@ for deploy in $(kubectl get deployments -n my-app -o jsonpath='{.items[*].metada
   kubectl rollout undo deployment/$deploy -n my-app
 done
 ```
-
-Done by Jonathan
