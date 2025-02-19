@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: voice2text-access-policy
+  namespace: my-app
+spec:
+  podSelector:
+    matchLabels:
+      app: voice2text-service
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: main-flask
+    ports:
+    - protocol: TCP
+      port: 6000

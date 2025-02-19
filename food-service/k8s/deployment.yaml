@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: food-service
+  namespace: my-app
+  labels:
+    app: food-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: food-service
+  template:
+    metadata:
+      labels:
+        app: food-service
+    spec:
+      containers:
+      - name: food-service
+        image: jonnehh/food-service:latest
+        ports:
+        - containerPort: 5080
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "1Gi"
+          limits:
+            cpu: "1"
+            memory: "2Gi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5080
+          initialDelaySeconds: 5
+          periodSeconds: 5

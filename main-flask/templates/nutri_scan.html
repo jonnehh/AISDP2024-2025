@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+    <head>
+        <title>Nutri Scan</title>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <!-- Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <!--[if lt IE 10]>
+        <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+        <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+      </head>
+<body>
+    <div class="page">
+        <section class="section section-lg">
+            <div class="container">
+                <div class="row row-50 justify-content-center justify-content-lg-between flex-lg-row-reverse">
+                    <div class="col-md-10 col-lg-7">
+                        <div class="thumbnail-video-1">
+                            <div class="embed-responsive embed-responsive-16by9" style="background-color:white;">
+                            </div>
+                            <div class="thumbnail-video__overlay video-overlay">
+                                <video id="video" autoplay></video>
+                                <canvas id="canvas" style="display:none;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-lg-5 col-xl-4">
+                        <div class="inset-left-2"> 
+                            <h3>Food Recognition</h3>
+                            <div id="food-detection-result"></div>
+                            <button class="button button-primary button-winona" id="capture-btn">Identify</button>
+                            <button class="button button-primary button-winona" style="background-color:cadetblue;">
+                                <a href="{{ url_for('home') }}" style="color: white;">Back</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        // ✅ 启动摄像头
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("video");
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => { video.srcObject = stream; })
+                .catch(err => console.error("摄像头无法访问: ", err));
+        });
+
+        // ✅ 处理图片拍摄和上传
+        function captureImage() {
+            const video = document.getElementById("video");
+            const canvas = document.getElementById("canvas");
+            const context = canvas.getContext("2d");
+
+            // 拍照
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // 获取 Base64 格式的图片
+            const imageData = canvas.toDataURL("image/jpeg");
+
+            // 发送到 Flask 服务器进行识别
+            fetch("/detect_food", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ image: imageData })
+            })
+            .then(response => response.json())
+            .then(data => displayFoodDetectionResult(data))
+            .catch(error => console.error("错误:", error));
+        }
+
+        // ✅ 在 HTML 页面显示识别结果
+        function displayFoodDetectionResult(detections) {
+            console.log("解析的 detections:", detections);  // 👈 打印 detections 结果
+
+            let resultDiv = document.getElementById("food-detection-result");
+            resultDiv.innerHTML = ""; // 清空已有内容
+
+            if (!detections || detections.length === 0) {
+                console.log("⚠️ 没有检测到食物，显示提示信息！");
+                resultDiv.innerHTML = "<p>No food detected.</p>";
+                return;
+            }
+
+            detections.forEach(detection => {
+                console.log("检测到:", detection);  // 👈 打印每个检测到的食物
+
+                let className = detection.class;
+                let confidence = (detection.confidence * 100).toFixed(2) + "%";
+                let message = detection.message.message;
+                let nutrition = detection.message.nutrition;
+
+                let htmlContent = `
+                    <div class="food-item">
+                        <h4>${className} (Confidence: ${confidence})</h4>
+                        <p>${message}</p>
+                        <h5>Nutrition Facts:</h5>
+                        <ul>
+                            <li><strong>Calories:</strong> ${nutrition.calories}</li>
+                            <li><strong>Carbohydrates:</strong> ${nutrition.carbohydrates}</li>
+                            <li><strong>Cholesterol:</strong> ${nutrition.cholesterol}</li>
+                            <li><strong>Fat:</strong> ${nutrition.fat}</li>
+                            <li><strong>Protein:</strong> ${nutrition.protein}</li>
+                            <li><strong>Sodium:</strong> ${nutrition.sodium}</li>
+                        </ul>
+                    </div>
+                    <hr>
+                `;
+
+                resultDiv.innerHTML += htmlContent;
+    });
+}
+
+        // ✅ 绑定按钮事件
+        document.getElementById("capture-btn").addEventListener("click", captureImage);
+    </script>
+</body>
+</html>

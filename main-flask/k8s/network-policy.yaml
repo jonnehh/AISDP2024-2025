@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: main-flask-network-policy
+  namespace: my-app
+spec:
+  podSelector:
+    matchLabels:
+      app: main-flask
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 0.0.0.0/0   # 或者替换为特定的 CIDR，如 "192.168.1.0/24"
+    ports:
+    - protocol: TCP
+      port: 80           # 允许外部流量访问 Service 对应的端口（例如 80）
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: ocr-service
+    ports:
+    - protocol: TCP
+      port: 5000         # 允许访问 OCR 服务
+  - to:
+    - podSelector:
+        matchLabels:
+          app: rag-service
+    ports:
+    - protocol: TCP
+      port: 5050         # 允许访问 RAG 服务
